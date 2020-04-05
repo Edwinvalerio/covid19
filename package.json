@@ -1,0 +1,25 @@
+{
+  "name": "covid19-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "model.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edwinvalerio/covid19.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edwinvalerio/covid19/issues"
+  },
+  "homepage": "https://github.com/Edwinvalerio/covid19#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "brain.js": "^1.2.2",
+    "express": "^4.17.1"
+  }
+}
