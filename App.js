@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 const diagnosisSym = require("./model");
 const app = express();
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
