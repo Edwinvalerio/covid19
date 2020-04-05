@@ -17,6 +17,6 @@ app.post("/diagnosis", (req, res) => {
   res.send(results);
 });
 
-app.listen(port || 400, () => {
+app.listen(port, () => {
   console.log(`app listening on Post: ${port}`);
 });
