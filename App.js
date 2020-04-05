@@ -8,7 +8,9 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
-  console.log("app active");
+  res.send(
+    "<h1>Covid-19 back-end</h1><p>Copyright © 2010 by Edwin Valerio & Carlos Ramirez</p>"
+  );
 });
 
 app.post("/diagnosis", (req, res) => {
