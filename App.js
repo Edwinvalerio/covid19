@@ -2,6 +2,18 @@ const express = require("express");
 var bodyParser = require("body-parser");
 const diagnosisSym = require("./model");
 const app = express();
+require("dotenv").config();
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
+app.use(express.json());
 
 const port = process.env.PORT || 5000;
 
@@ -13,10 +25,10 @@ app.get("/", (req, res) => {
   );
 });
 
-app.post("/diagnosis", (req, res) => {
-  console.log(req.query);
-  const results = diagnosisSym(req.query);
-  res.send(results);
+app.post("/diagnosis", async (req, res) => {
+  console.log(req.body);
+  const results = await diagnosisSym(req.body);
+  res.send(await results);
 });
 
 app.listen(port, () => {
