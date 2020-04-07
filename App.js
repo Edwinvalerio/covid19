@@ -30,17 +30,9 @@ app.get("/", (req, res) => {
   );
 });
 
-app.post("/diagnosis/:apikey", async (req, res) => {
-  const userKey = req.params.apikey;
-  if (userKey == apiKey) {
-    const results = await diagnosisSym(req.body);
-    res.send(await results);
-  } else {
-    res.json({
-      code: 404,
-      message: "invalid API Key",
-    });
-  }
+app.post("/diagnosis", async (req, res) => {
+  const results = await diagnosisSym(req.body);
+  res.send(await results);
 });
 
 app.listen(port, () => {
