@@ -32,6 +32,7 @@ app.get("/", (req, res) => {
 
 app.post("/diagnosis", async (req, res) => {
   const results = await diagnosisSym(req.body);
+  console.log("body from React==> ", req.body);
   res.send(await results);
 });
 

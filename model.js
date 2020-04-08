@@ -99,6 +99,7 @@ const data = [
       DifficultyBreathing: 1, //	Common in severe infections*,
       traveling: 1,
       contactedWithCovidPatient: 1,
+      lostSenseOfTaste: 1,
     },
     output: { covid: 1 },
   },
@@ -122,6 +123,7 @@ function diagnosisSym(patient) {
     DifficultyBreathing,
     Traveling,
     contactedWithCovidPatient,
+    lostSenseOfTaste,
   } = patient;
 
   const output = net.run({
@@ -139,6 +141,7 @@ function diagnosisSym(patient) {
     DifficultyBreathing,
     Traveling,
     contactedWithCovidPatient,
+    lostSenseOfTaste,
   });
 
   return output;
